@@ -8,6 +8,10 @@ import java.util.Map;
 
 public class UtilityFunctionsTest {
 
+    /**
+     * Test case for the function generateRandomList().
+     * This test checks if a random list of integers is generated with the correct size.
+     */
     @Test
     public void testGenerateRandomList() {
         int size = 10;
@@ -21,6 +25,10 @@ public class UtilityFunctionsTest {
         }
     }
 
+    /**
+     * Test case for the function countOccurrences().
+     * This test checks if the function correctly counts the occurrences of each integer in the list.
+     */
     @Test
     public void testCountOccurrences() {
         List<Integer> randomList = List.of(1, 2, 2, 3, 3, 3, 4);
@@ -35,6 +43,10 @@ public class UtilityFunctionsTest {
         assertEquals(1, occurrences.get(4));
     }
 
+    /**
+     * Test case for the function sortList().
+     * This test checks if the list is sorted in ascending order.
+     */
     @Test
     public void testSortList() {
         List<Integer> randomList = List.of(3, 1, 4, 2);
@@ -44,4 +56,3 @@ public class UtilityFunctionsTest {
         assertEquals(List.of(1, 2, 3, 4), sortedList);
     }
 }
-
