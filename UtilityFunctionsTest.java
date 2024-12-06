@@ -8,34 +8,29 @@ import java.util.Map;
 
 public class UtilityFunctionsTest {
 
-    /**
-     * Test case for the function generateRandomList().
-     * This test checks if a random list of integers is generated with the correct size.
-     */
     @Test
     public void testGenerateRandomList() {
+        // Size of the list to generate
         int size = 10;
         List<Integer> randomList = UtilityFunctions.generateRandomList(size);
         
+        // Check that the list is not empty and the correct size
         assertNotNull(randomList);
         assertEquals(size, randomList.size());
         
+        // Check that all elements are integers
         for (Integer num : randomList) {
             assertTrue(num instanceof Integer);
         }
     }
 
-    /**
-     * Test case for the function countOccurrences().
-     * This test checks if the function correctly counts the occurrences of each integer in the list.
-     */
     @Test
     public void testCountOccurrences() {
         List<Integer> randomList = List.of(1, 2, 2, 3, 3, 3, 4);
         Map<Integer, Integer> occurrences = UtilityFunctions.countOccurrences(randomList);
 
         assertNotNull(occurrences);
-        assertEquals(4, occurrences.size()); 
+        assertEquals(4, occurrences.size());  // We have 4 unique numbers
         
         assertEquals(1, occurrences.get(1));
         assertEquals(2, occurrences.get(2));
@@ -43,10 +38,6 @@ public class UtilityFunctionsTest {
         assertEquals(1, occurrences.get(4));
     }
 
-    /**
-     * Test case for the function sortList().
-     * This test checks if the list is sorted in ascending order.
-     */
     @Test
     public void testSortList() {
         List<Integer> randomList = List.of(3, 1, 4, 2);
@@ -56,3 +47,4 @@ public class UtilityFunctionsTest {
         assertEquals(List.of(1, 2, 3, 4), sortedList);
     }
 }
+
